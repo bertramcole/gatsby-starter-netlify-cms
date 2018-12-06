@@ -3,25 +3,34 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { Section, Container, Box, Columns, Column, Title } from 'bloomer'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+    <Section>
+      <Container>
+        <Columns isCentered>
+          <Column isSize="1/2">
+            <Box>
+              <Title>
                 {title}
-              </h2>
+              </Title>
               <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </Box>
+          </Column>
+          <Column isSize="1/2">
+            <Box>
+              <Title>
+                {title}
+              </Title>
+              <PageContent className="content" content={content} />
+            </Box>
+          </Column>
+        </Columns>
+      </Container>
+    </Section>
   )
 }
 
@@ -36,11 +45,10 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+          <AboutPageTemplate
+          contentComponent={HTMLContent}
+          title={post.frontmatter.title}
+          content={post.html}npm/> 
     </Layout>
   )
 }
