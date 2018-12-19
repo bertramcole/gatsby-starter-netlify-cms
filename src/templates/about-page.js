@@ -3,32 +3,20 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { Section, Container, Box, Columns, Column, Title } from 'bloomer'
+import { Section, Container, Title} from 'bloomer'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
     <Section>
-      <Container>
-        <Columns isCentered>
-          <Column isSize="1/2">
-            <Box>
+      <Container isSize='large' >
+      
               <Title>
                 {title}
               </Title>
               <PageContent className="content" content={content} />
-            </Box>
-          </Column>
-          <Column isSize="1/2">
-            <Box>
-              <Title>
-                {title}
-              </Title>
-              <PageContent className="content" content={content} />
-            </Box>
-          </Column>
-        </Columns>
+  
       </Container>
     </Section>
   )
