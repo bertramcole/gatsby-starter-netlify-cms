@@ -1,6 +1,6 @@
 ---
 templateKey: company-page
-title: Company our values
+title: 'Company Change Text '
 ---
 ### Shade-grown hello
 
