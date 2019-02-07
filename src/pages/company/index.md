@@ -1,7 +1,6 @@
 ---
-templateKey: 'company-page'
-path: /company
-title: Our Coffee
+templateKey: company-page
+title: Here is an Edit
 image: /img/jumbotron.jpg
 heading: What we offer
 description: >-
@@ -11,7 +10,7 @@ description: >-
   anyone.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/dragonchianbadges-01.png
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
@@ -99,3 +98,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+
