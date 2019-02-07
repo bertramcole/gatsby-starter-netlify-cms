@@ -30,7 +30,7 @@ intro:
         to help. You can schedule a custom 1-on-1 consultation with our baristas
         to learn anything you want to know about coffee roasting and brewing.
         Email us or call the store for details.
-    - image: /img/meeting-space.png
+    - image: /img/dragonchianbadges-01.png
       text: >
         We believe that good coffee has the power to bring people together.
         That’s why we decided to turn a corner of our shop into a cozy meeting
@@ -58,7 +58,7 @@ main:
     image: /img/products-grid2.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /img/products-grid2.jpg
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-
@@ -68,7 +68,7 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+full_image: /img/chemex.jpg
 pricing:
   heading: Monthly subscriptions
   description: >-
@@ -98,4 +98,3 @@ pricing:
       plan: Custom
       price: '??'
 ---
-
