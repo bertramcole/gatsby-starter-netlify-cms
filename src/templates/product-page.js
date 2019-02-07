@@ -2,10 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Content, { HTMLContent } from '../components/Content'
+import { Section, Container, Title} from 'bloomer'
 
 export const ProductPageTemplate = ({
   image,
@@ -107,144 +105,54 @@ export const ProductPageTemplate = ({
     </div>
   </section>
 )
+export const productPageTemplate = ({ title, content, contentComponent }) => {
+  const PageContent = contentComponent || Content
+
+  return (
+    <Section>
+      <Container isSize='large' >
+      
+              <Title>
+                {title}
+              </Title>
+              <PageContent className="content" content={content} />
+  
+      </Container>
+    </Section>
+  )
+}
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
-      />
+          <ProductPageTemplate
+          contentComponent={HTMLContent}
+          title={post.frontmatter.title}
+          content={post.html}npm/> 
     </Layout>
   )
 }
 
 ProductPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+  data: PropTypes.object.isRequired,
 }
 
 export default ProductPage
 
-export const productPageQuery = graphql`
+export const ProductPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
       }
     }
   }
