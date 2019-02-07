@@ -1,7 +1,7 @@
 ---
 templateKey: company-page
-title: Here is an Edit
-image: /img/jumbotron.jpg
+title: Company About
+image: /img/tron.jpg
 heading: What we offer
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
@@ -58,7 +58,7 @@ main:
     image: /img/products-grid2.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /img/tron.jpg
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-
@@ -68,7 +68,7 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+full_image: /img/products-grid2.jpg
 pricing:
   heading: Monthly subscriptions
   description: >-
