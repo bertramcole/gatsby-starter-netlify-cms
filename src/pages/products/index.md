@@ -1,6 +1,6 @@
 ---
 templateKey: product-page
-title: Here is an Edit
+title: Product Pages
 image: /img/jumbotron.jpg
 heading: What we offer
 description: >-
