@@ -6,6 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 import { Section, Container, Title} from 'bloomer'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const CompanyPageTemplate = ({
   image,
   title,
@@ -107,6 +108,8 @@ export const CompanyPageTemplate = ({
   </section>
 )
 =======
+=======
+>>>>>>> parent of ef49089... Company Image Query Bug
 export const CompanyPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
@@ -123,6 +126,9 @@ export const CompanyPageTemplate = ({ title, content, contentComponent }) => {
     </Section>
   )
 }
+<<<<<<< HEAD
+>>>>>>> parent of ef49089... Company Image Query Bug
+=======
 >>>>>>> parent of ef49089... Company Image Query Bug
 
 CompanyPageTemplate.propTypes = {
@@ -161,6 +167,10 @@ export const companyPageQuery = graphql`
   }
 `
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of ef49089... Company Image Query Bug
 =======
 
 >>>>>>> parent of ef49089... Company Image Query Bug

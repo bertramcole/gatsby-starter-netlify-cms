@@ -1,6 +1,7 @@
 ---
 templateKey: company-page
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: Company About
 image: /img/tron.jpg
 heading: What we offer
@@ -98,6 +99,9 @@ pricing:
         - Unlimited varieties
       plan: Custom
       price: '??'
+=======
+title: Company our values
+>>>>>>> parent of ef49089... Company Image Query Bug
 =======
 title: Company our values
 >>>>>>> parent of ef49089... Company Image Query Bug
