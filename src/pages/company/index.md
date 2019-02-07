@@ -1,7 +1,10 @@
 ---
 templateKey: product-page
 title: Our Coffee
+<<<<<<< HEAD
 image: /img/jumbotron.jpg
+=======
+>>>>>>> parent of 51295ea... Update index.md
 heading: What we offer
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
