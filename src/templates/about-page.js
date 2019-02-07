@@ -11,7 +11,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <Section>
       <Container isSize='large' >
-      
               <Title>
                 {title}
               </Title>
