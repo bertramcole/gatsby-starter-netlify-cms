@@ -55,7 +55,7 @@ const Navbar = class extends React.Component {
           Roadmap
         </Link>
         <Link className="navbar-item" to="/contact">
-          Contact
+          Resources
         </Link>
         <Link className="navbar-item" to="/">
           Newsroom
