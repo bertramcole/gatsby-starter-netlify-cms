@@ -1,7 +1,7 @@
 ---
 templateKey: company-page
 title: Company Pages
-image: /img/jumbotron.jpg
+image: /img/chemex.jpg
 heading: Company Page 1
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
